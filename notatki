@@ -1,1 +1,3 @@
 
+
+int * tab[N]= new int[N];
