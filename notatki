@@ -1,3 +1,10 @@
 
 
 int * tab[N]= new int[N];
+
+getline może wczytywać linie tekstu do danego znaku 
+getline(cin, napis); / getline(cin, tekst, 'x');
+
+zamiana duzych literek na male 
+if (c >= 'A' && c <= 'Z')
+            c = c + 32; 
