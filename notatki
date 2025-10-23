@@ -8,3 +8,11 @@ getline(cin, napis); / getline(cin, tekst, 'x');
 zamiana duzych literek na male 
 if (c >= 'A' && c <= 'Z')
             c = c + 32; 
+
+Tablica dynamiczna!!!
+tab = new int *[w]; //przydzielenie pamięci na w wierszy
+	
+for(int i=0;i<w;i++)
+            tab[i] = new int[k]; //przydzielenie dla każdego wiersza po k komórek
+
+setw() - ustawianie odstepu miedzy liczbami 
