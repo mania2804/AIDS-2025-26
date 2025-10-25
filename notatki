@@ -10,9 +10,10 @@ if (c >= 'A' && c <= 'Z')
             c = c + 32; 
 
 Tablica dynamiczna!!!
-tab = new int *[w]; //przydzielenie pamięci na w wierszy
+int** tab = new int *[w]; //przydzielenie pamięci na w wierszy
 	
 for(int i=0;i<w;i++)
             tab[i] = new int[k]; //przydzielenie dla każdego wiersza po k komórek
+delete[] tab; //zwalnianie pamieci
 
 setw() - ustawianie odstepu miedzy liczbami 
