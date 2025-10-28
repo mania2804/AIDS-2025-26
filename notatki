@@ -17,3 +17,24 @@ for(int i=0;i<w;i++)
 delete[] tab; //zwalnianie pamieci
 
 setw() - ustawianie odstepu miedzy liczbami 
+
+
+WCZYYWANIE PLIKÓW
+ifstream plik("lokomotywa.txt");
+    if (!plik.is_open()) {
+        cout << "Nie udalo sie otworzyc pliku!" << endl;
+        return 1;
+    }
+    
+    string linia, wyraz;
+    string caly_tekst;
+    
+    plik>>wyraz;
+    cout<<wyraz;
+    getline(plik, linia);
+    cout<<linia;
+    
+    
+      
+    
+    plik.close();
