@@ -38,3 +38,12 @@ ifstream plik("lokomotywa.txt");
       
     
     plik.close();
+
+
+
+rzutowanie na int
+static_cast<int>(a)
+
+floor(a) ---zwraca najwieksza liczbe calkowita mniejsza lub rowna a
+
+
