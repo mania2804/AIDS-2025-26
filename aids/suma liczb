@@ -1,0 +1,36 @@
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+
+int main()
+{
+    int a,b;
+    cout<<"Podaj a: ";
+    cin>>a;
+    cout<<"Podaj b: ";
+    cin>>b;
+    
+    if(a>=0&&a<b){
+        int suma=0;
+        for(int i=a; i<=b; i++){
+
+            if(i%6==0||i%10==7){
+                suma+=i;
+            }
+        }
+        
+        cout<<"Suma wynosi "<<suma;
+    }
+    else if(a<0){
+        cout<<"Liczba a musi być nieujemna";
+    }
+    else if(a>b){
+        cout<<"Liczba a musi być mniejsza niż b";
+    }
+    
+    return 0;
+}
