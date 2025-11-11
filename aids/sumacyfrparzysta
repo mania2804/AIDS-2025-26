@@ -5,6 +5,8 @@ using namespace std;
 
 void suma_cyfr_parzysta(int *tab, int n, int a, int b) {
     srand(time(0)); // Inicjalizacja generatora liczb pseudolosowych
+    int max_wystapien = n / 5; // Maksymalna liczba wystąpień dla jednej liczby
+    int *wystapienia = new int[b - a + 1](); // Tablica do śledzenia wystąpień liczb, inicjalizowana zerami
 
     for (int i = 0; i < n; i++) {
         int liczba;
@@ -12,15 +14,18 @@ void suma_cyfr_parzysta(int *tab, int n, int a, int b) {
         do {
             liczba = a + rand() % (b - a + 1); // Generowanie liczby z przedziału [a; b]
             suma = 0;
-            int temp = abs(liczba); // Uwzględnienie liczb ujemnych
+            int temp = abs(liczba);
             while (temp > 0) {
                 suma += temp % 10; // Pobranie ostatniej cyfry
                 temp /= 10;        // Usunięcie ostatniej cyfry
             }
-        } while (suma % 2 != 0); // Powtarzaj, aż suma cyfr będzie parzysta
+        } while (suma % 2 != 0 || wystapienia[liczba - a] >= max_wystapien);
 
         tab[i] = liczba;
+        wystapienia[liczba - a]++;
     }
+
+    delete[] wystapienia; // Zwolnienie pamięci
 }
 
 int main() {
