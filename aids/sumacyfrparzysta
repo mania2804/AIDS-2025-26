@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+void suma_cyfr_parzysta(int *tab, int n, int a, int b) {
+    srand(time(0)); // Inicjalizacja generatora liczb pseudolosowych
+
+    for (int i = 0; i < n; i++) {
+        int liczba;
+        int suma;
+        do {
+            liczba = a + rand() % (b - a + 1); // Generowanie liczby z przedziału [a; b]
+            suma = 0;
+            int temp = abs(liczba); // Uwzględnienie liczb ujemnych
+            while (temp > 0) {
+                suma += temp % 10; // Pobranie ostatniej cyfry
+                temp /= 10;        // Usunięcie ostatniej cyfry
+            }
+        } while (suma % 2 != 0); // Powtarzaj, aż suma cyfr będzie parzysta
+
+        tab[i] = liczba;
+    }
+}
+
+int main() {
+    int n, a, b;
+    cout << "Podaj rozmiar tablicy: ";
+    cin >> n;
+    cout << "Podaj przedzial [a; b]: ";
+    cin >> a >> b;
+
+    int *tab = new int[n];
+    suma_cyfr_parzysta(tab, n, a, b);
+
+    cout << "Wygenerowana tablica: ";
+    for (int i = 0; i < n; i++) {
+        cout << tab[i] << " ";
+    }
+    cout << endl;
+
+    delete[] tab; // Zwolnienie pamięci
+    return 0;
+}
