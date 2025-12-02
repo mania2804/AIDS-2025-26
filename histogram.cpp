@@ -17,16 +17,22 @@ using namespace std;
 int main() {
     string rodzaj;
     fstream plik("9.pgm");
+    if(!plik.is_open()){
+        cout<<"Nie udalo sie otworzyc pliku";
+        return 1;
+    }
     plik>>rodzaj;
     cout<<rodzaj<<endl;
     int  wymiar1, wymiar2,zakres;
     plik>>wymiar1>>wymiar2>>zakres;
     cout<<wymiar1<<" "<<wymiar2<<endl;
     cout<<zakres<<endl;
+    plik.ignore();
+    
 
 
     int rozmiar=wymiar1*wymiar2;
-    char **tab=new char *[rozmiar];
+    char **tab=new char *[wymiar1];
 
     for (int i=0; i<wymiar1; i++) {
         tab[i]=new char[wymiar2];
@@ -39,14 +45,20 @@ int main() {
     }
     for (int i=0; i<wymiar1; i++) {
         for (int j=0; j<wymiar2; j++) {
-            cout<<tab[i][j]<<" ";
+            cout<<int(tab[i][j])<<" ";
         }
     }
+
+    //teraz należy zrobic histogram do danego obrazka a nastepnie uzywajac funkcji z wikipediii go wyrownac 
+
+    
 
 
     for (int i=0; i<wymiar1; i++) {
         delete[] tab[i];
     }
     delete []tab;
+    
+    plik.close();
     return 0;
 }
