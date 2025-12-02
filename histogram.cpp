@@ -11,6 +11,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 using namespace std;
 
 
@@ -51,7 +52,8 @@ int main() {
 
     //teraz należy zrobic histogram do danego obrazka a nastepnie uzywajac funkcji z wikipediii go wyrownac 
 
-    
+    int histogram[256];
+
 
 
     for (int i=0; i<wymiar1; i++) {
