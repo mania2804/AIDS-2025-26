@@ -1,11 +1,15 @@
 #include <iostream>
-#include <string>
+#include <fstream>
+#include <cctype>
+
+using namespace std;
 
 struct Node{
-    double wartosc;
-    Node*next=nullptr;
-};
+    int wartosc;
+    char znak;
+    Node * next= nullptr;
 
+};
 void odloz(Node *&head, double x) {
     Node *nowy = new Node;
     nowy->wartosc = x;
@@ -24,34 +28,35 @@ void zdejmij(Node *&head) {
     delete temp;
 }
 
-void podejrzyj(Node *head, double wartosc) {
-    if (head == nullptr) {
-        cout << "Nie ma stosu." << endl;
-        return;
-    }
-
-    Node *temp = head;
-    for (int i = 1; i < n && temp != nullptr; i++) {
-        temp = temp->next;
-    }
-
-    if (temp == nullptr) {
-        cout << "Podany indeks jest za duzy." << endl;
-    } else {
-        cout << temp->wartosc<< endl;
-    }
-}
 
 void oproznij(Node*&head){
     head=nullptr;
     
 }
 
-
 int main(){
-    
-    
-    
-    
- return 0;   
+    string wyrazenie="2+3";
+
+    int n=wyrazenie.size;
+    // char *tab=new char;
+    // cout<<"Podaj wyrażenie:";
+     for(int i=0; i<n; i++){
+        if(isdigit(wyrazenie[i])){
+            odloz(head, wartosc);
+        }
+        else
+        odloz (head, znak);
+     }
+   
+
+     
+
+
+
+
+
+
+
+    return 0;
 }
+
