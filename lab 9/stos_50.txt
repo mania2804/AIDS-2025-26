@@ -1,0 +1,43 @@
+odloz Stoi na stacji lokomotywa
+odloz Ciężka ogromna i pot z niej spływa
+podejrzyj
+zdejmij
+odloz Tłusta oliwa
+rozmiar
+czy_pusty
+odloz Stoi i sapie dyszy i dmucha
+odloz Żar z rozgrzanego jej brzucha bucha
+podejrzyj
+zdejmij
+rozmiar
+odloz Bufor w bufor
+odloz Para buch koła w ruch
+odloz Najpierw powoli jak żółw ociężale
+wypisz
+zdejmij
+odloz Ruszyła maszyna po szynach ospale
+rozmiar
+odloz Szarpnęła wagony i ciągnie z mozołem
+podejrzyj
+zdejmij
+odloz I kręci się kręci się koło za kołem
+odloz I biegu przyspiesza i gna coraz prędzej
+odloz I dudni i stuka łomoce i pędzi
+wypisz
+zdejmij
+odloz A dokąd a dokąd a dokąd na wprost
+rozmiar
+odloz Po torze po torze po torze przez most
+podejrzyj
+odloz Przez góry przez tunel przez pola przez las
+zdejmij
+odloz I spieszy się spieszy by zdążyć na czas
+czy_pusty
+odloz Do taktu turkoce i puka i stuka
+rozmiar
+odloz To tak to tak to tak to tak to tak
+podejrzyj
+odloz Gładko tak lekko tak toczy się w dal
+zdejmij
+wypisz
+rozmiar

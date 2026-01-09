@@ -1,0 +1,3 @@
+C:/Users/Vaio/Desktop/mania/aids/kolos 3/lab 9/cmake-build-debug/CMakeFiles/lab_9.dir
+C:/Users/Vaio/Desktop/mania/aids/kolos 3/lab 9/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Vaio/Desktop/mania/aids/kolos 3/lab 9/cmake-build-debug/CMakeFiles/rebuild_cache.dir
