@@ -22,6 +22,32 @@ int main() {
 }
 
 
+WAZNE FUNKCJE STOSU 
+void push(Node*& top, double v) {
+    Node* nowy = new Node;
+    nowy->val = v;
+    nowy->next = top;
+    top = nowy;
+}
+
+double pop(Node*& top) {
+    if (top == nullptr) return 0;
+    Node* temp = top;
+    double v = temp->val;
+    top = top->next;
+    delete temp;
+    return v;
+}
+
+double peek(Node* top) {
+    return top ? top->val : 0;
+}
+
+bool empty(Node* top) {
+    return top == nullptr;
+}
+
+
 zadanie stos
 
 #include <iostream>
