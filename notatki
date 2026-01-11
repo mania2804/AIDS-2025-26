@@ -43,6 +43,7 @@ ifstream plik("lokomotywa.txt");
 
 rzutowanie na int
 static_cast<int>(a)
+atoi("") == char na int 
 
 floor(a) ---zwraca najwieksza liczbe calkowita mniejsza lub rowna a
 
